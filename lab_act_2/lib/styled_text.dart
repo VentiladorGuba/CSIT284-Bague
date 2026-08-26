@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'gradient_container.dart';
 class StyledText extends GradientContainer{
+  const StyledText({super.key});
+
+  @override
   Widget build(context){
     return Container(
       child: Text(

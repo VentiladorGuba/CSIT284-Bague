@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'styled_text.dart';
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+ GradientContainer({super.key});
+
+var currentImage = 'assets/dice-image/dice-1.png';
+void rollDice(){
+  currentImage = 'assets/dice-image/dice-2.png';
+}
+  @override
   Widget build(context){
     return Container(
         decoration: BoxDecoration(
@@ -14,7 +20,16 @@ class GradientContainer extends StatelessWidget {
             ])
         ),
         child: Center(
-          child: StyledText()
+          child: Column(
+            children: [
+              Image.asset(currentImage),
+              TextButton(onPressed: rollDice,
+              child: Text(
+                style: TextStyle(fontSize: 28, color: Colors.black),
+                "Roll Dice")
+                  )
+            ],
+          )
         )
       );
   }
