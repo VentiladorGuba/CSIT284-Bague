@@ -1,21 +1,10 @@
 import 'package:flutter/material.dart';
-
+import 'colorful_text.dart';
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(context) {
-    return Container(
-      child: Column(
-        children: [
-          Image.asset('lib/images/logo.png'),
-          TextButton(onPressed: (){}, child: Text("Click Now!"))
-        ],
-      ),
-    );
-  }
+  runApp(const MaterialApp(
+    home: Scaffold(
+      backgroundColor: Color.fromARGB(11, 108, 209, 6),
+      body: Center(child: ColorfulText()),
+    ),
+  ));
 }
