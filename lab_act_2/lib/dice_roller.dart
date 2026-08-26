@@ -18,4 +18,20 @@ class _DiceRollerState extends State<DiceRoller> {
     currentDiceImage = 'assets/dice-image/dice-4.png';
   });
  }
+ 
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+            children: [
+              Image.asset(currentDiceImage),
+              TextButton(onPressed: rollDice,
+              child: Text(
+                style: TextStyle(fontSize: 28, color: Colors.black),
+                "Roll Dice")
+                  )
+            ],
+          )
+    );
+  }
 }
