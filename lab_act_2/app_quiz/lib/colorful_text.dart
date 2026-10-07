@@ -25,9 +25,9 @@ class _ColorfulTextState extends State<ColorfulText> {
    return Column(
     mainAxisSize: MainAxisSize.min,
     children: [
-      Image.asset('lib/images/logo.png', color: colors.elementAt(select),),
+      Image.asset('lib/images/logo.png', color: colors.elementAt(select)),
       Text("Learn Flutter in a fun way!",
-      style: TextStyle(color: colors.elementAt(select), fontSize: 28),),
+      style: TextStyle(color: colors.elementAt(select), fontSize: 28)),
       OutlinedButton(onPressed: startQuiz, child: Text('Start Quiz',
       style: TextStyle(color: colors.elementAt(select), fontSize: 28),))
     ]
