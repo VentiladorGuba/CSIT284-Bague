@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:meals2/models/meal.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class MealItem extends StatelessWidget {
-  const MealItem({super.key});
+  const MealItem({super.key, required this.meal});
 
   final Meal meal;
 
@@ -12,7 +13,7 @@ class MealItem extends StatelessWidget {
       child: Stack(
         children: [
           FadeInImage(
-            placeholder: MemoryImage(TransparentImage),
+            placeholder: MemoryImage(kTransparentImage),
             image: NetworkImage(meal.imageUrl),
             ),
             Positioned(
