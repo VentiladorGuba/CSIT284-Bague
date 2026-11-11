@@ -14,6 +14,7 @@ class MealDetailsScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final FavoriteMeals = ref.watch(favoriteMealsProvider);
     return Scaffold(
         appBar: AppBar(title: Text(meal.title), actions: [
           IconButton(
